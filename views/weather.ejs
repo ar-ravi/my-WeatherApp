@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="main">
+        <form class="search-input" action="/" method="post">
+          <input type="text" class = "input-box" id = "input-box" name="cityName" placeholder="Enter city name...." required>
+          <button type="submit" class = "btn" id = "btn" name="button"><i class='fa fa-search'></i></button>
+        </form>
+      <div class="weather-body">
+        <div class="location-details">
+          <div id="city" id = "city"><%= Location %></div>
+          <div class="date" id = "date"><%= Date %></div>
+        </div>
+        <div class="weather-status">
+          <div class="temp" id = "temp"><%= Temprature %>&deg; C</div><br>
+          <div class="min-max" id = "min-max"><%=min%>&deg; C (min) / <%=max%>&deg; C (max)</div><br>
+          <div class="weather-icon" id = "weather-icon"><img src="icons/<%=icon%>.png" id = "myicon" alt="image"></div><br>
+          <div class="weather" id = "weather"><%= Weather%></div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
